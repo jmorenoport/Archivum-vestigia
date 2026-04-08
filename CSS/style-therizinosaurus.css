@@ -1,0 +1,164 @@
+/* --- CONFIGURACIÓ GENERAL --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e8f5e9;
+    background-color: #050f06;
+    /* Fons de textura de selva */
+    background-image: linear-gradient(rgba(5, 15, 6, 0.8), rgba(5, 15, 6, 0.95)), 
+                      url('https://www.transparenttextures.com/patterns/dark-matter.png');
+    background-attachment: fixed;
+}
+
+/* --- CAPÇALERA AMB IMATGE --- */
+.main-header {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-bg-image {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+}
+
+.header-bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    filter: saturate(0.5) brightness(0.7);
+}
+
+.header-overlay h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 5rem;
+    color: #c0ca33;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 6px;
+    color: #ffd54f;
+    text-transform: uppercase;
+}
+
+/* --- CONTENIDOR I TARGETES --- */
+.container {
+    max-width: 850px;
+    margin: -60px auto 4rem;
+    padding: 0 20px;
+    position: relative;
+}
+
+.formal-card {
+    background: rgba(15, 30, 15, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(192, 202, 51, 0.2);
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+}
+
+.highlight-card { border-left: 5px solid #c0ca33; }
+.danger-card { border-left: 5px solid #ff5252; }
+.alert-card { border-left: 5px solid #ff9800; }
+
+h2 {
+    font-family: 'Creepster', cursive;
+    color: #c0ca33;
+    font-size: 2.2rem;
+    margin-top: 0;
+}
+
+/* --- ESTILS DE MEDIA (IMATGES I VÍDEO) --- */
+.media-container {
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(192, 202, 51, 0.3);
+    background: #000;
+}
+
+.media-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: sepia(0.2);
+    transition: 0.5s;
+}
+
+.media-img:hover { filter: sepia(0); transform: scale(1.02); }
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+}
+
+.caption {
+    padding: 10px;
+    background: rgba(0,0,0,0.8);
+    font-size: 0.85rem;
+    color: #c0ca33;
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+}
+
+/* --- ALTRES --- */
+.grid-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.stat-item {
+    background: rgba(0,0,0,0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(192, 202, 51, 0.1);
+}
+
+.back-btn {
+    display: block;
+    text-align: center;
+    padding: 1.2rem;
+    background: #558b2f;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 2rem;
+    transition: 0.3s;
+}
+
+.back-btn:hover { background: #c0ca33; color: #050f06; }
+
+.main-footer {
+    text-align: center;
+    padding: 3rem;
+    color: #558b2f;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header-overlay h1 { font-size: 3rem; }
+    .formal-card { padding: 1.5rem; }
+}

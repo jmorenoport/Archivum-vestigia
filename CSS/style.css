@@ -1,0 +1,215 @@
+/* --- CONFIGURACIÓ GENERAL --- */
+.archivum-body {
+    background-color: #050505;
+    color: #cccccc;
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralitza el contingut */
+}
+
+/* --- TÍTOLS AMB CREEPSTER --- */
+.creepster-title, .main-header h1 {
+    font-family: 'Creepster', cursive !important;
+    color: #ff8c00;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* --- HEADER --- */
+.main-header {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0;
+    background: #000;
+}
+
+.main-header h1 {
+    font-size: 4.5em;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+}
+
+.subtitle {
+    font-family: 'IM Fell English SC', serif;
+    color: #666;
+    letter-spacing: 4px;
+    font-size: 1.2em;
+}
+
+/* --- LA CÀPSULA (INTRODUCCIÓ) --- */
+.intro-capsule {
+    background: #0d0d0d;
+    border: 2px solid #ff8c00;
+    border-radius: 25px;
+    padding: 40px;
+    max-width: 800px;
+    width: 90%;
+    margin: 40px auto;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.1);
+    text-align: center; /* Tot el text centrat */
+}
+
+.intro-capsule h2 {
+    font-size: 3em;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+/* PROTOCOL DE SEGURETAT */
+.security-protocol {
+    background: rgba(255, 140, 0, 0.05);
+    border: 1px dashed #ff8c00;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 15px;
+    max-width: 90%;
+    text-align: left; /* La llista es llegeix millor a l'esquerra */
+}
+
+.security-protocol ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.security-protocol li {
+    margin-bottom: 12px;
+}
+
+/* --- NAVEGACIÓ (GRID 3x2) --- */
+.navigation-links {
+    max-width: 900px;
+    width: 95%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.species-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnes */
+    gap: 20px;
+}
+
+.species-list li a {
+    display: block;
+    padding: 20px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 15px;
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.species-list li a:hover {
+    border-color: #ff8c00;
+    color: #ff8c00;
+    background: #1a1a1a;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+}
+
+.icon {
+    margin-right: 10px;
+    color: #ff8c00;
+}
+
+/* FOOTER */
+.system-footer, .main-footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #444;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 750px) {
+    .species-list {
+        grid-template-columns: 1fr; /* Una columna en mòbils */
+    }
+}
+/* --- ESTILS DEL QÜESTIONARI --- */
+.quiz-form {
+    text-align: left;
+    max-width: 90%;
+    margin: 0 auto;
+    color: #eee;
+}
+
+.quiz-form p {
+    font-weight: bold;
+    color: #ff8c00;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    background: #1a1a1a;
+    border: 1px solid #ff8c00;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #ff8c00;
+    color: #000 !important;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+}
+
+/* --- ESTILS DELS COMENTARIS --- */
+.comments-container {
+    margin-top: 20px;
+}
+
+.comment-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 3px solid #444;
+    text-align: left;
+}
+
+.comment-box.joke {
+    border-left: 3px solid #ff8c00; /* Color especial per als acudits */
+}
+
+.user-name {
+    display: block;
+    font-weight: bold;
+    color: #ff8c00;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.user-comment-input textarea {
+    width: 100%;
+    height: 80px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+/* Millora del select del formulari */
+select {
+    width: 100%;
+    padding: 10px;
+    background: #111;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 5px;
+}

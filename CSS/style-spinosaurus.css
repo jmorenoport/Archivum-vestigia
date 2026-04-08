@@ -1,0 +1,167 @@
+/* --- CONFIGURACIÓ TEMÀTICA VERD I OCRE --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e8f5e9; /* Verd molt clar */
+    background-color: #050f06; /* Verd robí molt fosc */
+    background-image: linear-gradient(rgba(5, 15, 6, 0.85), rgba(5, 15, 6, 0.95)), 
+                      url('https://www.transparenttextures.com/patterns/dark-matter.png');
+    background-attachment: fixed;
+}
+
+/* --- CAPÇALERA --- */
+.main-header {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-bg-image {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+}
+
+.header-bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    filter: saturate(0.5) brightness(0.5);
+}
+
+.header-overlay h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 5.5rem;
+    color: #c0ca33; /* Verd llima fosc / Ocre */
+    margin: 0;
+    text-shadow: 0 0 25px rgba(192, 202, 51, 0.5);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 6px;
+    color: #ffd54f; /* Ocre clar */
+    text-transform: uppercase;
+}
+
+/* --- TARGETES (CRISTALL D'AIGUA) --- */
+.container {
+    max-width: 850px;
+    margin: -60px auto 4rem;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.formal-card {
+    background: rgba(10, 25, 10, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(192, 202, 51, 0.2);
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+}
+
+.highlight-card { border-left: 5px solid #c0ca33; }
+.danger-card { border-left: 5px solid #ff5252; /* Vermell per perill */ }
+.alert-card { border-left: 5px solid #ff9800; /* Àmbar per duel */ }
+
+h2 {
+    font-family: 'Creepster', cursive;
+    color: #c0ca33;
+    font-size: 2.2rem;
+    margin-top: 0;
+}
+
+/* --- MEDIA (IMATGES I VÍDEO) --- */
+.media-container {
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(192, 202, 51, 0.3);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    background: #000;
+}
+
+.media-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.6s ease;
+}
+
+.media-img:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+}
+
+.caption {
+    padding: 12px;
+    background: rgba(5, 15, 6, 0.95);
+    font-size: 0.85rem;
+    color: #c0ca33;
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+}
+
+/* --- ESTATS I BOTÓ --- */
+.grid-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.stat-item {
+    background: rgba(192, 202, 51, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(192, 202, 51, 0.1);
+}
+
+.back-btn {
+    display: block;
+    text-align: center;
+    padding: 1.2rem;
+    background: #c0ca33;
+    color: #050f06;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 2rem;
+    transition: 0.4s;
+}
+
+.back-btn:hover { 
+    background: #ffd54f; 
+    box-shadow: 0 0 30px rgba(192, 202, 51, 0.4);
+}
+
+.main-footer {
+    text-align: center;
+    padding: 3rem;
+    color: #558b2f;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header-overlay h1 { font-size: 3rem; }
+    .formal-card { padding: 1.5rem; }
+}
