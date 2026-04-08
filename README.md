@@ -24,8 +24,8 @@ El cor del projecte és el seu motor de correcció, que avalua les respostes i a
 
 | Puntuació | Rang | Recompensa Visual |
 | :--- | :--- | :--- |
-| **6/6** | 🏆 **Mestre del Temps** | T-Rex Victory (Jurassic Park) |
-| **3 - 5** | 🔍 **Investigador** | Velociraptor Analític |
+| **6/6** | 🏆 **Mestre del Temps** | T-Rex |
+| **3 - 5** | 🔍 **Investigador** | Velociraptor |
 | **0 - 2** | 💀 **Extint** | Dennis Nedry (Ah, ah, ah!) |
 
 ---
